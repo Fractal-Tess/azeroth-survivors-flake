@@ -35,6 +35,8 @@ jobs:
         with:
           extra_nix_config: |
             experimental-features = nix-command flakes
+      - name: Test interrupted archive downloads
+        run: python3 scripts/test-prefetch.py
       - name: Fetch and verify official game archive
         run: ./scripts/prefetch-archive.py
       - name: Check native build and tests
