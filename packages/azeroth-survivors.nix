@@ -5,6 +5,7 @@
   unrar-free,
   writeShellApplication,
   util-linux,
+  coreutils,
   steam-run,
   proton-ge-bin,
   makeDesktopItem,
@@ -34,6 +35,7 @@ let
     runtimeInputs = [
       steam-run
       util-linux
+      coreutils
     ];
     text =
       builtins.replaceStrings
