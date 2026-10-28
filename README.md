@@ -8,7 +8,7 @@ Packages Aethus's game with a desktop launcher, a Proton runtime and the Vulkan 
 ## Play
 
 ```sh
-nix run git+ssh://git@neo.netbird.cloud:2222/fractal-tess/azeroth-survivors-flake.git
+nix run github:Fractal-Tess/azeroth-survivors-flake
 ```
 
 Supports **x86_64 Linux**. The pinned Windows archive is about 755 MB; its extracted data and Proton need several GB. A fresh installation starts at v0.102.3; use the game's **Download & restart** prompt for newer releases. This packages the original binary, not the separate source reconstruction.
@@ -17,7 +17,7 @@ Supports **x86_64 Linux**. The pinned Windows archive is about 755 MB; its extra
 
 ```nix
 inputs.azeroth-survivors = {
-  url = "git+ssh://git@neo.netbird.cloud:2222/fractal-tess/azeroth-survivors-flake.git";
+  url = "github:Fractal-Tess/azeroth-survivors-flake";
   inputs.nixpkgs.follows = "nixpkgs";
 };
 ```
@@ -29,6 +29,8 @@ programs.azeroth-survivors.enable = true;
 ```
 
 The application menu entry is **Azeroth Survivors (Proton)**. Fresh installations live under `${XDG_DATA_HOME:-~/.local/share}/azeroth-survivors`; existing manual installations keep their current paths. The launcher prefers Steam's installed Proton Experimental or Hotfix, with a bundled GE-Proton fallback. It creates a separate Proton prefix; Steam itself does not need to be running.
+
+The repository is also mirrored on the private Gitadel forge.
 
 ## Packaging notes
 
