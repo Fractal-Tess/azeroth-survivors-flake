@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/logo.svg" alt="Nix snowflake" width="160" /></p>
+<p align="center"><img src="assets/logo.svg" alt="Azeroth Survivors plus Nix" width="480" /></p>
 <p align="center"><a href="https://wow.aethus.pl/"><img src="https://img.shields.io/badge/game-Aethus-gold" alt="Original game by Aethus" /></a> <img src="https://img.shields.io/badge/Nix-flake-5277c3" alt="Nix flake" /></p>
 <h1 align="center">Azeroth Survivors for Nix</h1>
 <p align="center">The official Windows game, ready to launch on Linux through Proton.</p>
@@ -36,4 +36,4 @@ The repository is also mirrored on the private Gitadel forge.
 
 `nix build` builds the launcher and game payload. `nix flake check` also checks the modules and launcher behavior. The archive is fetched directly from the developer and verified with a fixed hash. If the developer replaces that URL's contents, update the hash and base version in `packages/azeroth-survivors.nix`; Nix will reject mismatched downloads.
 
-The game, game data and Proton prefix are never committed to this repository. Packaging code is [MIT licensed](LICENSE); the game and Warcraft artwork retain their owners' rights. [Aethus's original game](https://wow.aethus.pl/) is not affiliated with Blizzard. The [Nix snowflake](https://github.com/NixOS/nixos-artwork) is NixOS artwork, used without modification under its upstream license.
+Game binaries, game data archives and Proton prefixes are never committed to this repository. Packaging code is [MIT licensed](LICENSE); the game and Warcraft artwork retain their owners' rights. [Aethus's original game](https://wow.aethus.pl/) is not affiliated with Blizzard. The README logo combines the original game icon, extracted from the official Windows executable, with the [Nix snowflake](https://github.com/NixOS/nixos-artwork/blob/master/logo/nix-snowflake-colours.svg) by Simon Frankau and Tim Cuthbertson ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)). Both marks retain their original artwork and colors; they were resized and arranged with a plus sign. Game artwork retains its owners' rights; the packaging license does not cover it. This is an unofficial package.
